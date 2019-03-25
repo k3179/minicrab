@@ -1,1 +1,2 @@
-# minicrab
+# crab
+mini php framework
