@@ -8,6 +8,7 @@ define('CONFIG_PATH', ROOT_PATH.'/config');
 define('CONTROLLER_PATH', ROOT_PATH.'/controller');
 define('LIB_PATH', ROOT_PATH.'/lib');
 define('WWW_PATH', ROOT_PATH.'/www');
+define('THUMB_PATH', ROOT_PATH.'/www/thumb');
 include_once LIB_PATH.'/ExceptionHandler.class.php';
 include_once LIB_PATH.'/_setup.php';
 include_once LIB_PATH.'/_function.php';
@@ -26,7 +27,8 @@ function crab_autoloader($class_name){
     }
     $library_class_array    =  array(
         'RouteHandler','Display',
-        'File','Cache','Db',
+        'Cache','Db',
+        'File','Image',
     );
     // check first character
     if(in_array($class_name,$library_class_array)){

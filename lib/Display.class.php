@@ -13,7 +13,7 @@ class Display {
     private static $common_js_files = array();
     private static $css_files = array();
     private static $common_css_files = array();
-    private static $other_link  =  array();
+    private static $other_links  =  array();
 
     // common meta http equiv
     private static $meta_http_equiv = array(
@@ -51,6 +51,7 @@ class Display {
      *
      * @param string $path
      * @param array $args
+     * @throws Exception
      * @return void
      */
     public static function view($path,$args=null){
@@ -68,6 +69,7 @@ class Display {
      *
      * @param string $path
      * @param array $args
+     * @throws Exception
      * @return void
      */
     private function import($path,$args=null){
@@ -306,7 +308,7 @@ class Display {
     }
 
     /**
-     * get file version from filemtime
+     * get file version from file modification time
      *
      * @param string $file_src
      * @return string
